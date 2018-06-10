@@ -34,7 +34,7 @@ class Api
             if (count($this->user) < 1) {
               //  exit("Invalid key");
 
-                exit(response()->json([
+                ex it(response()->json([
                     "error" => "Invalid key"
                 ], 401));
 

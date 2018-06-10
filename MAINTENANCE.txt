@@ -1,0 +1,2 @@
+Any non-critical maintenance should be done on a Sunday - ideally between 12 am and 3 am.
+Please check 'Usage.txt' for details.

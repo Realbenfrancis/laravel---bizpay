@@ -1,0 +1,15 @@
+name: BizpayWeb
+description: BizpayWeb
+language: PHP
+server: ubuntu1610
+directory: public
+framework: laravel54
+database: combi
+    sql: mysql
+    nosql: dydb
+scale: yes
+mode: combi
+backup: all
+vendor: aws
+zone: eu-west-2
+config: env

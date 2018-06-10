@@ -1,0 +1,210 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@media screen and (max-width: 768px) {
+
+    .break-off {
+        visibility:visible ;
+    }
+
+    .genric-checkout {
+        width: 100%;
+        margin: auto;
+        margin-top: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .powerd{
+        width: 100%;
+        margin: auto;
+        padding: 15px;
+    }
+
+    .genric-checkout .logo-area .simple-text {
+        top: 105px;
+    }
+
+    .custom-padding-left {
+        padding: 0!important;
+        margin: 15px 0;
+    }
+    .custom-padding-right {
+        padding: 0!important;
+
+    }
+
+    .agreement {
+        padding: 0 10px 0 0 ;
+
+
+    }
+    .show-area {
+        margin: 0 0 0 21px;
+    }
+    .radio-margin {
+        margin-left: 12px;
+    }
+    .no-padding-right{
+
+        padding: 0;
+
+    }
+
+    .no-padding-left{
+
+        padding-left: 0;
+
+    }
+    .payments form {
+        padding: 15px;
+    }
+    .post-code-button{
+        margin-left:  0;
+    }
+    .postcode {
+        text-align: center;
+    }
+
+
+    .custom-class-td {
+
+        .table thead tr th {
+            padding: 16px 8px 12px 8px;
+        }
+
+        .table tbody tr .td-padding {
+            padding-left: 8px;
+        }
+        .custom-class-td .table tbody tr .td-padding {
+            padding-left: 8px;
+        }
+
+        td.td-padding.padding-right-eight{
+            padding-right: 8px;
+        }
+
+        .table tbody tr td {
+            padding: 16px 8px 12px 8px;
+        }
+
+    }
+
+    td.number.text-center {
+        padding-right: 6% !important;
+    }
+
+}
+
+
+@media screen and (max-width: 560px) {
+    td.number.text-center {
+        padding-right: 8px !important;
+    }
+}
+@media  screen and (max-width: 991px) {
+
+    .custom-padding-left {
+        padding: 0!important;
+        margin: 15px 0;
+    }
+    .custom-padding-right {
+        padding: 0!important;
+
+    }
+
+
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .genric-checkout {
+        margin: 0;
+        padding-bottom: 15px;
+        border-radius:  0;
+    }
+    .custom-container {
+        padding: 0;
+    }
+
+    .genric-checkout .logo-area .simple-text {
+        top: 91px;
+    }
+
+    .powerd {
+        padding-top: 0;
+        background: #fff;
+        width: 100%;
+        margin: auto;
+    }
+
+}
+
+
+@media screen and (max-width: 560px) {
+    td.text-right {
+        text-align: left;
+    }
+
+    th.th-padding.text-right {
+        text-align: left;
+        padding-right: 8px!important;
+    }
+
+    th.pay-items {
+        padding-left: 8px!important;
+        padding-right: 8px!important;
+    }
+    .table tbody tr .td-padding {
+        padding-left: 8px;
+    }
+
+    .table .pay-items {
+         width: auto!important;
+
+    }
+
+    .table tbody tr td {
+        padding: 16px 8px 12px 8px;
+    }
+    .th-padding {
+
+        padding-right: 8px !important;
+        text-align: left;
+    }
+
+
+    .table thead tr th {
+        border-bottom-width: 0;
+        font: 700 14px 'Arial Bold', 'Arial';
+        color: #333333;
+        padding: 16px 8px 12px 8px;
+        width: auto;
+    }
+
+    th.text-right {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 351px) {
+
+    .table thead tr th {
+
+        padding: 16px 4px 12px 4px;
+    }
+
+    th.pay-items {
+        padding-left: 4px!important;
+        padding-right: 0!important;
+    }
+
+   .padding-left-for {
+       padding-left: 4px !important;
+   }
+}
+
+

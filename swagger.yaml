@@ -1,0 +1,105 @@
+swagger: '2.0'
+schemes:
+  - http
+  - https
+host: api.bizpay.co.uk
+basePath: /v0.2
+info:
+  description: |
+    Description
+
+    # Introduction
+    Some info
+    # OpenAPI Specification
+    Spec
+    # Authentication
+    Petstore offers authentication using:
+      - API Key
+
+
+    <!-- ReDoc-Inject: <security-definitions> -->
+  version: 0.2.2
+  title: Bizpay API
+  termsOfService: 'https://bizpay.co.uk/terms/'
+  contact:
+    email: api@bizpay.co.uk
+  x-logo:
+    url: 'https://static.wixstatic.com/media/638582_05b10375892e42c1bba79747d1b9d661.png/v1/fill/w_330,h_108,al_c,usm_0.66_1.00_0.01/638582_05b10375892e42c1bba79747d1b9d661.png'
+tags:
+  - name: pet
+    description: Everything about your Pets
+  - name: store
+    description: Access to Petstore orders
+  - name: user
+    description: Operations about user
+x-tagGroups:
+  - name: General
+    tags:
+      - pet
+      - store
+  - name: User Management
+    tags:
+      - user
+securityDefinitions:
+  api_key:
+    description: |
+      For this sample, you can use the api key `special-key` to test the authorization filters.
+    type: apiKey
+    name: api_key
+    in: header
+x-servers:
+  - url: //api.bizpay.co.uk/v2
+    description: Default server
+  - url: //api.bizpay.co.uk/sandbox
+    description: Sandbox server
+paths:
+  '/pet/{petId}':
+    get:
+      tags:
+        - pet
+      summary: Find pet by ID
+      description: Returns a single pet
+      operationId: getPetById
+      produces:
+        - application/xml
+        - application/json
+      parameters:
+        - name: petId
+          in: path
+          description: ID of pet to return
+          required: true
+          type: integer
+          format: int64
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Invalid ID supplied
+        '404':
+          description: Pet not found
+      security:
+        - api_key: []
+      x-code-samples:
+              - lang: 'C#'
+                source: |
+                  PetStore.v1.Pet pet = new PetStore.v1.Pet();
+                  pet.setApiKey("your api key");
+                  pet.petType = PetStore.v1.Pet.TYPE_DOG;
+                  pet.name = "Rex";
+                  // set other fields
+                  PetStoreResponse response = pet.create();
+                  if (response.statusCode == HttpStatusCode.Created)
+                  {
+                    // Successfully created
+                  }
+                  else
+                  {
+                    // Something wrong -- check response for errors
+                    Console.WriteLine(response.getRawResponse());
+                  }
+              - lang: PHP
+                source: "$form = new \\PetStore\\Entities\\Pet();\n$form->setPetType(\"Dog\");\n$form->setName(\"Rex\");\n// set other fields\ntry {\n    $pet = $client->pets()->create($form);\n} catch (UnprocessableEntityException $e) {\n    var_dump($e->getErrors());\n}\n"
+definitions:
+  Id:
+    type: integer
+    format: int64
